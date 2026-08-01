@@ -1,204 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Voluntary Kidney Donation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kidney Donation Awareness</title>
 
- <!-- Google tag (gtag.js) --> 
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18018402838">
-</script> 
-<script> 
-window.dataLayer = window.dataLayer || []; 
-function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-gtag('config', 'AW-18018402838'); 
-</script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #e9f7f8;
-      color: #0b2f36;
-      line-height: 1.6;
-    }
-
-    header {
-      background: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    header h2 {
-      margin: 0;
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #0b2f36;
-      font-weight: 500;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 3rem 2rem;
-      background: #0d6e73;
-      color: white;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    .content {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .section {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    }
-
-    h2 {
-      margin-top: 0;
-      font-size: 1.6rem;
-      color: #0b2f36;
-    }
-
-    /* Floating WhatsApp */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 999;
-    }
-
-    .whatsapp-float img {
-      width: 35px;
-      height: 35px;
-    }
-
-    @media (min-width: 768px) {
-      .hero {
-        flex-direction: row;
-        text-align: left;
-        padding: 5rem 3rem;
-      }
-    }
-  </style>
 <style>
-    /* Animations */
-    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 1s forwards; }
-    @keyframes fadeInUp { to { opacity:1; transform: translateY(0); } }
-    .slide-in { opacity: 0; transform: translateX(-30px); animation: slideIn 1s forwards; }
-    @keyframes slideIn { to { opacity:1; transform: translateX(0); } }
-  </style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#f5f9fc;
+color:#333;
+line-height:1.7;
+}
+
+header{
+background:#ffffff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+position:sticky;
+top:0;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:999;
+}
+
+.logo{
+display:flex;
+align-items:center;
+font-size:24px;
+font-weight:bold;
+color:#0b7b72;
+}
+
+.logo span{
+font-size:40px;
+margin-right:10px;
+}
+
+nav a{
+text-decoration:none;
+margin-left:25px;
+color:#444;
+font-weight:500;
+}
+
+nav a:hover{
+color:#0b7b72;
+}
+
+.hero{
+
+background:linear-gradient(rgba(0,70,80,.75),rgba(0,70,80,.75)),
+url("https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+color:white;
+padding:120px 8%;
+display:flex;
+align-items:center;
+min-height:90vh;
+
+}
+
+.hero-content{
+max-width:650px;
+}
+
+.hero h1{
+font-size:52px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#2ecc71;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#27ae60;
+}
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:38px;
+color:#0b7b72;
+margin-bottom:50px;
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.card img{
+
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:20px;
+
+}
+
+.card h3{
+margin-bottom:15px;
+color:#0b7b72;
+}
+
+.about{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:40px;
+align-items:center;
+
+}
+
+.about img{
+
+width:100%;
+border-radius:20px;
+
+}
+
+.contact{
+
+background:#0b7b72;
+color:white;
+text-align:center;
+
+}
+
+.contact h2{
+
+color:white;
+
+}
+
+.contact p{
+
+font-size:18px;
+margin:10px 0;
+
+}
+
+footer{
+
+background:#033431;
+color:white;
+text-align:center;
+padding:20px;
+
+}
+
+/* WhatsApp */
+
+.whatsapp{
+
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:38px;
+color:white;
+text-decoration:none;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+animation:pulse 1.8s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.12);}
+100%{transform:scale(1);}
+
+}
+
+</style>
+
 </head>
+
 <body>
-  <header>
-    <div style="display:flex;align-items:center;gap:10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Logo" style="width:40px;height:40px;">
-      <h2>KidneyCare Connect</h2>
-    </div>
-    <nav>
-      <a href="#info">Info</a>
-      <a href="#support">Support</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero" style="background:url('https://images.unsplash.com/photo-1580281658629-76f608b43a4d?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;">
-    <div style="background:rgba(0,0,0,0.45);padding:2rem;border-radius:12px;">
-      <h1 style="color:white;">Donate Your Kidney And Get Paid</h1>
-      <p style="color:white;">Kidney donor is needed and we are specialize in kidney dialysis as we also buy from a potential donor. If you are interested in selling kidney’s please don’t hesitate to contact us</p>
-    </div>
-  </section>
+<header>
 
-  <div class="content fade-in">
-    <div class="section" id="info"><img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=900&q=60" style="width:40%;border-radius:10px;margin-bottom:1rem;">
-      <h2>Your Choice Matters</h2>
-      <p>Donate your Kidney and get 5crores send us a WhatsApp message us on +918880282802.</p>
-    </div>
+<div class="logo">
 
-    <div class="section" id="support"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=60" style="width:40%;border-radius:10px;margin-bottom:1rem;">
-      <h2>How We Help You</h2>
-      <p>Our platform offers reliable details regarding the donation process, medical requirements, and legal procedures. We ensure donors receive proper support, counseling, and access to certified transplant centers.</p>
-    </div>
+<span>🩺</span>
 
-    <div class="section"><img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=900&q=60" style="width:40%;border-radius:10px;margin-bottom:1rem;">
-      <h2>Your Safety & Legal Protection</h2>
-      <p>Your health and safety are our priority. Only individuals in good physical condition with compatible medical profiles can donate. We guide you through the legal framework to ensure your rights and well-being are fully protected.</p>
-    </div>
+SPECIALIST KIDNEY HOSPITAL
 
-    <div class="section">
-      <h2>Simple & Transparent Process</h2>
-      <p>The donation journey may look complex, but with verified support and proper coordination, we help make it smooth. From initial evaluation to hospital connection, you get step-by-step guidance.</p>
-    </div>
+</div>
 
-    <div class="section" id="contact">
-      <h2>Contact Us on WhatsApp</h2>
-      <p>If you're considering voluntary kidney donation or need more information, contact us anytime. Click the WhatsApp button below to chat instantly.</p>
-      <p><strong>WhatsApp Number:</strong> +91 8880282802</p>
-    </div>
-  </div>
+<nav>
 
-  <a class="whatsapp-float" href="https://wa.me/message/3EC7OTWV4IWGK1" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#services">Information</a>
+<a href="#contact">Contact</a>
+<a href="#services">Services</a>
 
-  <footer style="background:#e8f3f3;padding:2rem;text-align:center;margin-top:2rem;font-size:0.9rem;color:#0b2f36;">
-    <h3>Disclaimer</h3>
-    <p>This platform provides information and guidance for voluntary, altruistic kidney donation only. We do not support, engage in, or promote any form of organ trade, compensation, or unethical practices. All donations must comply with Indian legal and medical regulations.</p>
-    <br>
-    <h3>Privacy Notice</h3>
-    <p>Contacting us via WhatsApp means you voluntarily share your information with our support team. We do not sell or misuse your data. Your information is used solely to provide guidance related to voluntary kidney donation.</p>
-    <br>
-    <h3>Organization Information</h3>
-    <p>KidneyCare Connect — Support & Guidance for Voluntary Kidney Donation in India.<br>For inquiries, reach us through our WhatsApp contact only.</p>
-  </footer>
+</nav>
 
-<section id="about" class="section fade-in" style="margin:2rem auto;max-width:900px;">
-  <h2>About Us</h2>
-  <p>KidneyCare Connect is dedicated to providing safe, legal, and transparent guidance for voluntary kidney donation in India. We connect donors to certified hospitals, offering verified information and support.</p>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>DONATE YOUR KIDNY AND GET COMPENSATED CONTACT US ON WHATSAPP TODAY</h1>
+
+<p>
+
+Do you want to Donate your kidney for money please contact us immediately and we shall offer you A huge amount of money upto 5crores for your one kidney? So if interested kindly contact us now for more information. No. +919233194753 also on WhatsApp Email: info@malikkidneydonation.
+
+</p>
+
+<a class="btn" href="https://wa.me/qr/U7EWQOXBYHI6J1" target="_blank">
+
+Chat on WhatsApp
+
+</a>
+
+</div>
+
 </section>
 
-<section id="privacy" class="section fade-in" style="margin:2rem auto;max-width:900px;">
-  <h2>Privacy Policy</h2>
-  <p>Your data is handled with care. We only use WhatsApp communication to provide donation guidance. We never sell or misuse personal information.</p>
+<section id="services">
+
+<h2 class="section-title">
+
+Why Kidney Donation Matters
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80">
+
+<h3>DONATE KIDNEY</h3>
+
+<p>
+
+Kidney donor is needed in here at SPECIALIST KIDNEY HOSPITAL and we are specialize in kidney dialysis as we also deal with selling/buying and transplantation of kidneys with a living an corresponding donor. If you are interested in selling or buying kidney’s please don’t hesitate to contact us.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=80">
+
+<h3>KIDNEY CENTER</h3>
+
+<p>
+
+Dedicated to serving the community, the physicians at the SPECIALIST KIDNEY HOSPITAL believe all patients with chronic kidney disease are entitled to an evaluation for transplant candidacy. Whether you’re referred by a physician, a dialysis center, or if you’ve referred yourself, each patient who enters our transplant center will be evaluated individually and holistically..
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80">
+
+<h3>KIDNEY DONOR URGENTLY NEEDED</h3>
+
+<p>
+
+Kidney donor is needed in here at SPECIALIST KIDNEY HOSPITAL and we are specialize in kidney dialysis as we also deal with selling/buying and transplantation of kidneys with a living an corresponding donor. If you are interested in selling or buying kidney’s please don’t hesitate to contact us.
+
+</p>
+
+</div>
+
+</div>
+
 </section>
+
+<section id="about">
+
+<div class="about">
+
+<div>
+
+<h2 style="font-size:40px;color:#0b7b72;margin-bottom:20px;">
+
+About Our Mission
+
+</h2>
+
+<p>
+
+ There is a huge shortage of kidneys and without donors, people are dying at an increasing rate, Donate a Kidney and be compensated with cash of 5 Crore Rupees..
+
+</p>
+
+<br>
+
+<p>
+
+Always seek advice from licensed healthcare professionals before making any medical decisions.
+
+</p>
+
+</div>
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">
+
+Contact Us
+
+</h2>
+
+<p>
+
+📞 +91 92331 94753
+
+</p>
+
+<p>
+
+💬 WhatsApp Available
+
+</p>
+
+<p>
+
+📧 info@malikkidneydonation.com
+
+</p>
+
+<br>
+
+<a class="btn"
+
+href="https://wa.me/qr/U7EWQOXBYHI6J1"
+
+target="_blank">
+
+Open WhatsApp
+
+</a>
+
+</section>
+
+<footer>
+
+© 2026 Kidney Donation Awareness. Educational information only. Always consult licensed medical professionals.
+
+</footer>
+
+<a class="whatsapp"
+
+href="https://wa.me/qr/U7EWQOXBYHI6J1"
+
+target="_blank"
+
+title="Chat on WhatsApp">
+
+💬
+
+</a>
+
 </body>
+
 </html>
-
-
-
-
