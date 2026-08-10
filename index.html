@@ -1,437 +1,973 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kidney Donation Awareness</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Specialist Kidney Hospital | Kidney Donation Process & Transplant Information</title>
 
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18364011985"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta name="description"
+          content="Specialist Kidney Hospital provides educational information about kidney health and donation process, living kidney donation, dialysis and transplant evaluation.">
 
-  gtag('config', 'AW-18364011985');
-</script>
-<style>
+    <meta name="theme-color" content="#0b6e99">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-body{
-background:#f5f9fc;
-color:#333;
-line-height:1.7;
-}
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-header{
-background:#ffffff;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 8%;
-position:sticky;
-top:0;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-z-index:999;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.logo{
-display:flex;
-align-items:center;
-font-size:24px;
-font-weight:bold;
-color:#0b7b72;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.logo span{
-font-size:40px;
-margin-right:10px;
-}
+        body {
+            font-family: "Inter", sans-serif;
+            line-height: 1.7;
+            color: #243746;
+            background: #f7fbfd;
+        }
 
-nav a{
-text-decoration:none;
-margin-left:25px;
-color:#444;
-font-weight:500;
-}
+        a {
+            text-decoration: none;
+        }
 
-nav a:hover{
-color:#0b7b72;
-}
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-.hero{
+        /* =========================
+           NAVIGATION
+        ========================= */
 
-background:linear-gradient(rgba(0,70,80,.75),rgba(0,70,80,.75)),
-url("https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80");
+        header {
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
 
-background-size:cover;
-background-position:center;
-color:white;
-padding:120px 8%;
-display:flex;
-align-items:center;
-min-height:90vh;
+        .navbar {
+            max-width: 1150px;
+            margin: auto;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #0b6e99;
+            font-size: 20px;
+            font-weight: 800;
+        }
 
-.hero-content{
-max-width:650px;
-}
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #0b6e99;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
 
-.hero h1{
-font-size:52px;
-margin-bottom:20px;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
 
-.hero p{
-font-size:20px;
-margin-bottom:35px;
-}
+        nav a {
+            color: #243746;
+            font-weight: 600;
+            transition: 0.3s;
+        }
 
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:#2ecc71;
-color:white;
-text-decoration:none;
-border-radius:40px;
-font-weight:bold;
-transition:.3s;
-}
+        nav a:hover {
+            color: #0b6e99;
+        }
 
-.btn:hover{
-background:#27ae60;
-}
+        /* =========================
+           HERO
+        ========================= */
 
-section{
-padding:80px 8%;
-}
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    rgba(5, 54, 76, 0.78),
+                    rgba(5, 54, 76, 0.78)
+                ),
+                url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=80")
+                center/cover no-repeat;
+            color: white;
+        }
 
-.section-title{
-text-align:center;
-font-size:38px;
-color:#0b7b72;
-margin-bottom:50px;
-}
+        .hero-content {
+            max-width: 1150px;
+            width: 100%;
+            margin: auto;
+            padding: 80px 20px;
+        }
 
-.cards{
+        .hero h1 {
+            max-width: 800px;
+            font-size: clamp(38px, 6vw, 68px);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
 
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+        .hero p {
+            max-width: 750px;
+            font-size: 19px;
+            margin-bottom: 30px;
+            color: #eef9fc;
+        }
 
-}
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-.card{
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
 
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+        .btn-primary {
+            background: #20a4dc;
+            color: white;
+        }
 
-}
+        .btn-primary:hover {
+            background: #1689bb;
+            transform: translateY(-2px);
+        }
 
-.card img{
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
 
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:12px;
-margin-bottom:20px;
+        .btn-outline:hover {
+            background: white;
+            color: #0b6e99;
+        }
 
-}
+        /* =========================
+           SECTIONS
+        ========================= */
 
-.card h3{
-margin-bottom:15px;
-color:#0b7b72;
-}
+        section {
+            padding: 80px 20px;
+        }
 
-.about{
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
 
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-gap:40px;
-align-items:center;
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-}
+        .section-title h2 {
+            font-size: 36px;
+            color: #0b5878;
+            margin-bottom: 12px;
+        }
 
-.about img{
+        .section-title p {
+            max-width: 700px;
+            margin: auto;
+            color: #617581;
+        }
 
-width:100%;
-border-radius:20px;
+        /* =========================
+           ABOUT
+        ========================= */
 
-}
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
 
-.contact{
+        .about-image img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
 
-background:#0b7b72;
-color:white;
-text-align:center;
+        .about-text h3 {
+            color: #0b6e99;
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
 
-}
+        .about-text p {
+            margin-bottom: 18px;
+        }
 
-.contact h2{
+        /* =========================
+           SERVICES
+        ========================= */
 
-color:white;
+        .services {
+            background: #eef8fb;
+        }
 
-}
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
 
-.contact p{
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 7px 25px rgba(0, 0, 0, 0.06);
+            transition: 0.3s;
+        }
 
-font-size:18px;
-margin:10px 0;
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
 
-}
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            background: #e4f5fb;
+            color: #0b6e99;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-footer{
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: #0b5878;
+        }
 
-background:#033431;
-color:white;
-text-align:center;
-padding:20px;
+        /* =========================
+           DONATION INFORMATION
+        ========================= */
 
-}
+        .info-box {
+            background: white;
+            border-left: 5px solid #20a4dc;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 7px 25px rgba(0, 0, 0, 0.06);
+            margin-bottom: 25px;
+        }
 
-/* WhatsApp */
+        .info-box h3 {
+            color: #0b6e99;
+            margin-bottom: 10px;
+        }
 
-.whatsapp{
+        /* =========================
+           CTA
+        ========================= */
 
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-width:70px;
-height:70px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:38px;
-color:white;
-text-decoration:none;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
-animation:pulse 1.8s infinite;
+        .cta {
+            background: #0b6e99;
+            color: white;
+            text-align: center;
+        }
 
-}
+        .cta h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
 
-@keyframes pulse{
+        .cta p {
+            max-width: 750px;
+            margin: 0 auto 25px;
+            color: #e8f7fb;
+        }
 
-0%{transform:scale(1);}
-50%{transform:scale(1.12);}
-100%{transform:scale(1);}
+        /* =========================
+           CONTACT
+        ========================= */
 
-}
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
 
-</style>
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 7px 25px rgba(0, 0, 0, 0.06);
+        }
 
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+
+        .contact-item i {
+            color: #0b6e99;
+            font-size: 21px;
+            margin-top: 5px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #0b5878;
+        }
+
+        .contact-item a {
+            color: #536b78;
+        }
+
+        .contact-item a:hover {
+            color: #0b6e99;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #073b51;
+            color: #dcecf2;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        .footer-disclaimer {
+            font-size: 13px;
+            color: #b9d0d9;
+            max-width: 850px;
+            margin: 15px auto 0;
+        }
+
+        /* =========================
+           TELEGRAM FLOATING BUTTON
+        ========================= */
+
+        .telegram-float {
+            position: fixed;
+            width: 62px;
+            height: 62px;
+            right: 22px;
+            bottom: 22px;
+            background: #229ED9;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+            z-index: 9999;
+            transition: 0.3s;
+        }
+
+        .telegram-float:hover {
+            transform: scale(1.1);
+            background: #168dcc;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 14px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 300px;
+            }
+
+            section {
+                padding: 60px 18px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .logo-icon {
+                width: 36px;
+                height: 36px;
+            }
+
+            nav ul {
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .telegram-float {
+                width: 56px;
+                height: 56px;
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+    <div class="navbar">
 
-<div class="logo">
+        <a href="#home" class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </span>
+            Specialist Kidney Hospital
+        </a>
 
-<span>🩺</span>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#information">Information</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-Specialist Kidney Hospital
-
-</div>
-
-<nav>
-
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#services">Information</a>
-<a href="#contact">Contact</a>
-<a href="#services">Services</a>
-
-</nav>
-
+    </div>
 </header>
 
-<section class="hero">
 
-<div class="hero-content">
+<!-- =========================
+     HERO
+========================= -->
 
-<h1>Donate your kidney and get paid</h1>
+<section class="hero" id="home">
 
-<p>
+    <div class="hero-content">
 
-Do you want to Donate your kidney for money please contact us immediately and we shall offer you A huge amount of money upto 5crores for your one kidney? So if interested kindly contact us now for more information. No. +918506801461 also on WhatsApp Email: info@malikkidneydonation.
+        <h1>
+            Kidney Health, Donation Process & Transplant Information
+        </h1>
 
-</p>
+        <p>
+            Are you interested to donate your kidney and get compensated?, Learn about kidney health, living kidney donation process
+            and transplant evaluation. Speak with qualified healthcare
+            professionals at Malik Kidney Specialist Hospital for appropriate medical guidance.
+			Chat with us on telegram today.
+        </p>
 
-<a class="btn" href="https://wa.me/918506801461" target="_blank">
+        <div class="buttons">
 
-Chat on WhatsApp
+            <a href="https://t.me/Malikspecialisthospital"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-primary">
 
-</a>
+                <i class="fa-brands fa-telegram"></i>
+                Chat on Telegram
 
-</div>
+            </a>
 
-</section>
+            <a href="tel:+919233194753"
+               class="btn btn-outline">
 
-<section id="services">
+                <i class="fa-solid fa-phone"></i>
+                +91 9233194753
 
-<h2 class="section-title">
+            </a>
 
-Why Kidney Donation Matters
+        </div>
 
-</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80">
-
-<h3>DONATE KIDNEY</h3>
-
-<p>
-
-Kidney donor is needed in here at SPECIALIST KIDNEY HOSPITAL and we are specialize in kidney dialysis as we also deal with selling/buying and transplantation of kidneys with a living an corresponding donor. If you are interested in selling or buying kidney’s please don’t hesitate to contact us.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=80">
-
-<h3>KIDNEY CENTER</h3>
-
-<p>
-
-Dedicated to serving the community, the physicians at the SPECIALIST KIDNEY HOSPITAL believe all patients with chronic kidney disease are entitled to an evaluation for transplant candidacy. Whether you’re referred by a physician, a dialysis center, or if you’ve referred yourself, each patient who enters our transplant center will be evaluated individually and holistically..
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80">
-
-<h3>KIDNEY DONOR URGENTLY NEEDED</h3>
-
-<p>
-
-Kidney donor is needed in here at SPECIALIST KIDNEY HOSPITAL and we are specialize in kidney dialysis as we also deal with selling/buying and transplantation of kidneys with a living an corresponding donor. If you are interested in selling or buying kidney’s please don’t hesitate to contact us.
-
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
-<div class="about">
+    <div class="container">
 
-<div>
+        <div class="section-title">
 
-<h2 style="font-size:40px;color:#0b7b72;margin-bottom:20px;">
+            <h2>About Kidney Care</h2>
 
-About Our Mission
+            <p>
+                Reliable information can help individuals and families
+                understand kidney donation process and available options.
+				want to donate your kidney, contact us at Malik Kidney Specialist Hospital.
+            </p>
 
-</h2>
+        </div>
 
-<p>
+        <div class="about-grid">
 
- There is a huge shortage of kidneys and without donors, people are dying at an increasing rate, Donate a Kidney and be compensated with cash of 5 Crore Rupees..
+            <div class="about-image">
 
-</p>
+                <img
+                    src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1000&q=80"
+                    alt="Healthcare professional providing medical care"
+                    loading="lazy">
 
-<br>
+            </div>
 
-<p>
+            <div class="about-text">
 
-Always seek advice from licensed healthcare professionals before making any medical decisions.
+                <h3>Supporting Better Kidney Health</h3>
 
-</p>
+                <p>
+                    Kidney disease can affect individuals and families in
+                    many ways. Early medical evaluation and appropriate
+                    treatment can help patients understand their condition
+                    and make informed decisions.
+                </p>
 
-</div>
+                <p>
+                    Living kidney donation may be an option for some patients
+                    with kidney failure. Donors and recipients must undergo
+                    appropriate medical evaluation and follow the applicable
+                    laws and transplant regulations. Kidney donor get compensation
+                </p>
 
-<div>
+                <p>
+                    Always speak with Malik Kidney Specialist professionals before
+                    making decisions regarding kidney donation, transplantation
+                    or treatment.
+                </p>
 
-<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80">
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INFORMATION
+========================= -->
+
+<section id="information" class="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Kidney Donation Information</h2>
+
+            <p>
+                Understanding the donation process is an important step
+                before considering living kidney donation.
+            </p>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>
+                <i class="fa-solid fa-circle-info"></i>
+                Living Kidney Donation
+            </h3>
+
+            <p>
+                Living kidney donation involves a medically evaluated person
+                voluntarily donating one kidney to an eligible recipient.
+                Donor safety and informed consent are essential throughout
+                the process.
+            </p>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>
+                <i class="fa-solid fa-user-doctor"></i>
+                Medical Evaluation
+            </h3>
+
+            <p>
+                Potential donors and recipients require comprehensive medical
+                assessments. Healthcare professionals determine whether
+                donation or transplantation is medically appropriate.
+            </p>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>
+                <i class="fa-solid fa-scale-balanced"></i>
+                Legal & Ethical Considerations
+            </h3>
+
+            <p>
+                Organ donation and transplantation are subject to medical,
+                ethical and legal requirements. Any donation should be
+                voluntary, informed and handled through properly authorized
+                healthcare and transplant systems such as Malik Kidney Specialist Hospital.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section class="contact" id="contact">
 
-<h2 class="section-title">
+<!-- =========================
+     SERVICES
+========================= -->
 
-Contact Us
+<section id="services">
 
-</h2>
+    <div class="container">
 
-<p>
+        <div class="section-title">
 
-📞 +91 918506 801461
+            <h2>Areas of Kidney Care</h2>
 
-</p>
+            <p>
+                Learn more about common areas of kidney treatment and
+                transplant care.
+            </p>
 
-<p>
+        </div>
 
-💬 WhatsApp Available
+        <div class="service-grid">
 
-</p>
+            <div class="service-card">
 
-<p>
+                <div class="service-icon">
+                    <i class="fa-solid fa-kidneys"></i>
+                </div>
 
-📧 info@malikkidneydonation.com
+                <h3>Kidney Health</h3>
 
-</p>
+                <p>
+                    Educational information about kidney health, kidney
+                    disease and the importance of professional medical care.
+                </p>
 
-<br>
+            </div>
 
-<a class="btn"
 
-href="https://wa.me/918506801461"
+            <div class="service-card">
 
-target="_blank">
+                <div class="service-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
 
-Open WhatsApp
+                <h3>Dialysis Information</h3>
 
-</a>
+                <p>
+                    Learn about dialysis and why patients with advanced
+                    kidney disease may require renal replacement therapy.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+
+                <h3>Transplant Evaluation</h3>
+
+                <p>
+                    Kidney transplant candidates are assessed individually
+                    by qualified healthcare teams to determine appropriate
+                    treatment options.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
+
+
+<!-- =========================
+     CALL TO ACTION
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>Have Questions About Kidney Donation?</h2>
+
+        <p>
+            Contact us for general information and guidance. Medical decisions
+            should always be made with qualified healthcare professionals.
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+
+            <a href="https://t.me/Malikspecialisthospital"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-primary">
+
+                <i class="fa-brands fa-telegram"></i>
+                Contact Us on Telegram
+
+            </a>
+
+            <a href="tel:+919233194753"
+               class="btn btn-outline">
+
+                <i class="fa-solid fa-phone"></i>
+                Call +91 9233194753
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Get in touch for general information about kidney health,
+                donation and transplant-related services.
+            </p>
+
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <div>
+                        <strong>Phone</strong>
+
+                        <a href="tel:+919233194753">
+                            +91 9233194753
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-brands fa-telegram"></i>
+
+                    <div>
+                        <strong>Telegram</strong>
+
+                        <a href="https://t.me/Malikspecialisthospital"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            @Malikspecialisthospital
+
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+                        <strong>Email</strong>
+
+                        <a href="mailto:info@malikkidneydonation.com">
+
+                            info@malikkidneydonation.com
+
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3 style="color:#0b5878; margin-bottom:15px;">
+                    Important Medical Notice
+                </h3>
+
+                <p>
+                    Do you want to Donate your kidney please contact us immediately.
+					and you shall be compensated for your heroic act of kindness? if interested kindly contact us now for more information
+					
+
+                </p>
+
+                <p style="margin-top:15px;">
+                    Please consult our healthcare professional for proper medical advice on how to donate your kidney and get compensated.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-© 2026 Kidney Donation Awareness. Educational information only. Always consult licensed medical professionals.
+    <p>
+        &copy; 2026 Specialist Kidney Hospital. All rights reserved.
+    </p>
+
+    <p class="footer-disclaimer">
+        Educational information only. Kidney donation and transplantation
+        must be conducted through Malik Kidney Specialist Hospital and
+        transplant systems and in accordance with applicable laws.
+        Always consult for professionals advice at Malik kidney Specialist Hospital.
+    </p>
 
 </footer>
 
-<a class="whatsapp"
 
-href="https://wa.me/918506801461"
+<!-- =========================
+     FLOATING TELEGRAM BUTTON
+========================= -->
 
-target="_blank"
+<a class="telegram-float"
+   href="https://t.me/Malikspecialisthospital"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Chat with us on Telegram"
+   aria-label="Chat with us on Telegram">
 
-title="Chat on WhatsApp">
-
-💬
+    <i class="fa-brands fa-telegram"></i>
 
 </a>
 
 </body>
-
 </html>
